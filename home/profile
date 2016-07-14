@@ -1,0 +1,41 @@
+GLOBUS_LOCATION=/opt/ldg
+export GLOBUS_LOCATION
+if [ -f ${GLOBUS_LOCATION}/etc/globus-user-env.sh ] ; then
+	. ${GLOBUS_LOCATION}/etc/globus-user-env.sh
+fi
+
+export PATH="/usr/local/git/bin:$PATH"
+
+
+
+##
+# Your previous /Users/grmead/.profile file was backed up as /Users/grmead/.profile.macports-saved_2015-02-12_at_20:08:23
+##
+
+# MacPorts Installer addition on 2015-02-12_at_20:08:23: adding an appropriate PATH variable for use with MacPorts.
+export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
+# Finished adapting your PATH environment variable for use with MacPorts.
+
+source ${HOME}/Documents/LALApps/etc/lalsuiterc
+
+# Add GHC 7.10.1 to the PATH, via https://ghcformacosx.github.io/
+export GHC_DOT_APP="/Applications/ghc-7.10.1.app"
+if [ -d "$GHC_DOT_APP" ]; then
+  export PATH="${HOME}/.cabal/bin:${GHC_DOT_APP}/Contents/bin:${PATH}"
+fi
+
+# Add colors to the command line
+export CLICOLOR=1
+export LSCOLORS=ExFxCxDxBxegedabagacad
+
+export PATH="/Applications/Julia-0.4.5.app/Contents/Resources/julia/bin:$PATH"
+
+# added by Anaconda2 4.0.0 installer
+# Moved from .bash_profile to .profile by GDM 2016-06-29
+export PATH="/Users/grmead/anaconda2/bin:$PATH"
+# Try putting it at the end instead
+#export PATH="$PATH:/Users/grmead/anaconda2/bin"
+
+# Set language to American English and UTF-8
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8

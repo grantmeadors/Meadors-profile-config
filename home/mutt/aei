@@ -1,0 +1,20 @@
+set imap_user = grant.meadors
+set imap_pass = $my_pw_aei
+
+set folder = imaps://grmead@intranet.aei.uni-hannover.de
+set spoolfile = +INBOX
+set postponed = +Drafts
+set record = +Sent
+mailboxes = +INBOX
+
+set realname = 'Grant David Meadors'
+set from = grant.meadors@aei.mpg.de
+set hostname = "aei.mpg.de"
+set signature = "Grant David Meadors"
+
+set my_smtp_user = grant.meadors@aei.mpg.de
+set smtp_url = smtps://$my_smtp_user@intranet.aei.uni-hannover.de
+
+set header_cache = "~/mail/mutt/aei"
+
+account-hook $folder "set imap_user=grmead@intranet.aei.uni-hannover.de"

@@ -1,0 +1,20 @@
+set imap_user = gdmeadors@posteo.net
+set imap_pass = $my_pw_posteo
+
+set folder = imaps://$imap_user
+set spoolfile = +INBOX
+set postponed = +Drafts
+set record = +Sent
+mailboxes = +INBOX
+
+set realname = 'Grant David Meadors'
+set from = gdmeadors@posteo.net
+set hostname = "posteo.de"
+set signature = "Grant David Meadors"
+
+set my_smtp_user = gdmeadors@posteo.net
+set smtp_url = smtps://$my_smtp_user@posteo.de
+
+set header_cache = "~/mail/mutt/posteo"
+
+account-hook $folder "set imap_user=gdmeadors@posteo.net"
